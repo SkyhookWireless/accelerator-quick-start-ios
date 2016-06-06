@@ -8,39 +8,54 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+// Make sure you visited https://my.skyhookwireless.com/ to setup campaigns for your app and generate
+// the api key. Assign that key to apiKey variable (see below)
 
-@end
+static NSString *apiKey = @"";
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    if (apiKey.length == 0)
+    {
+        // Throwing alert view from AppDelegate is a little bit tricky, folks. For starters, we need a ViewController
+        // instance to put the alert on, but AppDelegate is not a ViewController. We can fetch a reference to ViewController
+        // via 'window' property, but the problem is that at this point of execution the main window is not loaded yet.
+        // To ensure the alert code execution after iOS creates the root ViewController we have to shcedule the block via main queue.
+
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^
+        {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"No App Key"
+                                                                           message:@"Please visit my.skyhookwireless.com to create app key, then edit AppDelegate"
+                                                                                   @" to initialize the apiKey variable and rebuild the app."
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+
+            // Keep in mind that we assume a single view app here.
+            [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        }];
+
+        // The above instructions might sound a somewhat complicated. The good news is you do not need to check for
+        // app key presence in your app.
+    }
+    else
+    {
+        // We use AppDelegate to hold a shared instance of SHXAccelerator. Please note that we do not set a delegate property of accelerator here.
+        // The MapViewController is going to subscribe to SHXAccelerator events by assigning self-reference to the delegate property later.
+        // Whether this approach fits your app is going to be your call. The major thing to remember is that SHXAccelerator instance lifecycle should match
+        // the app lifecycle, rather than a lifecycle of UI element(s).
+        
+        _accelerator = [[SHXAccelerator alloc] initWithKey:apiKey];
+        self.accelerator.optedIn = YES;
+        self.accelerator.userID = @"unique-user-id.make-sure-it-is-unique-and-consistent-between-app-restarts";
+        [self.accelerator startMonitoringForAllCampaigns];
+        
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound
+                                                                                        categories:nil]];
+    }
+
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end

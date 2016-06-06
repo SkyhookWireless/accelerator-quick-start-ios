@@ -8,16 +8,11 @@
 
 #import "MapViewController.h"
 
-// Make sure you visited https://my.skyhookwireless.com/ to setup campaigns for your app and generate
-// the api key. Assign that key to apiKey variable (see below)
-
-static NSString *apiKey = @"";
-
 @interface MapViewController ()
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (strong, nonatomic) SHXAccelerator *accelerator;
+@property (weak, nonatomic) SHXAccelerator *accelerator;
 
 @end
 
@@ -29,14 +24,11 @@ static NSString *apiKey = @"";
     self.mapView.delegate = self;
     self.locationManager = [CLLocationManager new];
     self.locationManager.delegate = self;
+    self.accelerator = ((AppDelegate*)[UIApplication sharedApplication].delegate).accelerator;
     
-    if (apiKey.length > 0)
+    if (self.accelerator != nil)
     {
-        self.accelerator = [[SHXAccelerator alloc] initWithKey:apiKey];
         self.accelerator.delegate = self;
-        self.accelerator.optedIn = YES;
-        self.accelerator.userID = @"unique-user-id.make-sure-it-is-unique-and-consistent-between-app-restarts";
-        [self.accelerator startMonitoringForAllCampaigns];
     }
 }
 
@@ -44,15 +36,9 @@ static NSString *apiKey = @"";
 {
     [super viewDidAppear:animated];
     
-    if (apiKey.length == 0)
-    {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"No App Key"
-                                                                      message:@"Please visit my.skyhookwireless.com to create app key, then edit MapViewController"
-                                    @" to initialize the apiKey variable and rebuild the app."
-                                                               preferredStyle:UIAlertControllerStyleAlert];
-        [self presentViewController:alert animated:YES completion:nil];
-    }
-    
+    // Actually, we are not going to show user location on the map. Our goal is to zoom map view
+    // to current location. As soon as mapView:didUpdateUserLocation receives first coordinate, we
+    // will set showsUserLocation to NO
     self.mapView.showsUserLocation =
         ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways);
 }
