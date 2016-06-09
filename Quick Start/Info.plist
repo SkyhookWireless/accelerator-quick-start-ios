@@ -29,10 +29,6 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Context Accelerator needs to watch your location.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
