@@ -128,6 +128,7 @@
 
 @class SHXPersona;
 @class SHXIPLocation;
+@class SHXCampaign;
 
 /**
  * Skyhook Accelerator
@@ -441,4 +442,14 @@
  */
 - (void)fetchRecentCampaignVisitsWithLimit:(NSUInteger)limit
                                 completion:(void (^)(NSArray *visits, NSError *error))completion;
+
+/**
+ *  Fetch the list of campaign available on server.
+ *
+ * \param completion a completion block to be called when done. On success,
+ *                   campaigns will contain an array of unordered SHXCampaign objects.
+ *                   On error, campaigns will be nil and error will contain the
+ *                   error object.
+ */
+- (void)fetchCampaignsWithCompletion:(void (^)(NSArray<SHXCampaign *> *campaigns, NSError *error))completion;
 @end
