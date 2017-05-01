@@ -86,13 +86,43 @@
  * \li April 15, 2014: US Patent 8700053: System for and methods of determing likelikood of relocation of reference points in a positioning system.
  * \li April 22, 2014: US Patent 8706140: System and Method of Passive and Active Scanning of WLAN-Enabled Access Points to Estimate Position of a WLAN Positioning Device.
  * \li May 1, 2014: Australian Patent 2012200417: Method and system for determining location using a hybrid satellite and WLAN positioning system by selecting the best WLAN-PS solution.
+ * \li September 16, 2014: US Patent 8837363: Location beacon database and server method of building a location beacon database, and location based services
+ * \li October 21, 2014: US Patent 2600861: Continuous data optimization method in a positioning system
+ * \li November 18, 2014: US Patent 8890746: Methods and systems of hybrid positioning for increasing the reliability and accuracy of location estimation
+ * \li November 21, 2014: European Patent 101466411: Calculation of quality of estimation of WLAN access point characteristics for use in a WLAN positioning system
+ * \li December 9, 2014: US Patent 8909245: Method of estimating an expected error of a position estimate for use in a WLAN positioning system that estimates the position of a WLAN-enabled device
+ * \li January 22, 2015: Australian Patent 2011202783: Method of utilizing Wi-Fi-enabled devices to monitor Wi-Fi access points in a target area to indicate whether a Wi-Fi access point has moved 5 relative to its previously recorded location
+ * \li February 11, 2015: European Patent 101494252: Method of estimating an expected error of a position estimate for use in a WLAN positioning system that estimates the position of a WLAN-enabled device
+ * \li February 24, 2015: US Patent 8965412: Method of determining device location using the stored locations for the identified Wi-Fi access points, the signal strengths of the received messages and the chosen location-determination algorithm
+ * \li March 3, 2015: US Patent 8971915: Systems for and methods of determining likelihood of mobility of reference points in a positioning system are disclosed
+ * \li March 3, 2015: US Patent 8971923: Methods of and systems for measuring beacon stability of wireless access points are provided
+ * \li March 17, 2015: US Patent 8983493: Method and system for selecting and providing a relevant subset of Wi-Fi location information to a mobile client device so the client device may estimate its position with efficient utilization of resources
+ * \li March 17, 2015: US Patent 8983504: Systems for and methods of determining likelihood of relocation of reference points in a positioning system are disclosed
+ * \li March 31, 2015: US Patent 8996032: Systems for and methods of determining likelihood of reference point identity duplication in a positioning system
+ * \li April 7, 2015: US Patent 9001743: Method and system for increasing the accuracy of a WLAN based position estimate using cellular positioning information
+ * \li April 14, 2015: US Patent 9008690: Method for estimating the speed and bearing of a Wi-Fi enabled device using WLAN radio signals in a WLAN based location service
+ * \li April 21, 2015: US Patent 9013350: Systems and methods for using a satellite positioning system to detect moved WLAN access points
+ * \li April 21, 2015: US Patent 9014715: Systems for and methods of determining likelihood of atypical transmission characteristics of reference points in a positioning system
+ * \li May 12, 2015: US Patent 9031580: Method of estimating demographic information associated with a selected tile based on tracks of a plurality of mobile device users
+ * \li May 19, 2015: US Patent 9037162: Methods and systems of continuously optimizing data in Wi-Fi positioning systems
+ * \li May 19, 2015: US Patent 9037160: A method for providing contextual information about a location of a wireless-enabled mobile device
+ * \li June 9, 2015: US Patent 20196621: A method for estimating position using WLAN access point radio propagation characteristics in a WLAN location based service is provided.
+ * \li June 23, 2015: European Patent 2651853: Estimation of position using wlan access point radio propagation characteristics in a WLAN positioning system.
+ * \li July 10, 2015: Japanese Patent JP5775449: The method of integrating a WLAN-PS and SPS to create a hybrid positioning system.
+ * \li August 11, 2015: US Patent US9103900: System and method of gathering WLAN packet samples to improve position estimates of WLAN devices.
+ * \li September 1, 2015: US Patent TW200942057: Methods and systems for selecting and providing a relevant subset of Wi-Fi location information to a mobile client device
+ * \li December 30, 2015: European Patent EP2427004: Methods and systems for classifying WLAN access points according to the quality of estimation of characteristics of the WLAN access points are provided.
+ * \li January 12, 2016: US Patent US2013217390: A method of and system for estimating the range of a mobile device to a wireless installation is disclosed.
+ * \li February 2, 2016: US Patent US2011235532: Methods of and systems for resolving multiple location estimate conflicts in a WLAN-positioning system.
+ * \li March 8, 2016: US Patent US2013241776: Technique for using cached information with a WLAN positioning system to obtain an estimate of a position of a mobile device.
+ 
  *
  *
  * \see http://www.skyhookwireless.com/patents/
  *
  * \page license Limited Use License
  *
- * Copyright (C) 2005-2013 Skyhook, Inc. All rights reserved.
+ * Copyright (C) 2005-2017 Skyhook, Inc. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted subject to the following:
@@ -129,6 +159,11 @@
 @class SHXPersona;
 @class SHXIPLocation;
 @class SHXCampaign;
+
+typedef NS_ENUM(NSInteger, SHXCampaignVenueEventType) {
+    SHXCampaignVenueEventTypeNear,
+    SHXCampaignVenueEventTypeInside
+};
 
 /**
  * Skyhook Accelerator

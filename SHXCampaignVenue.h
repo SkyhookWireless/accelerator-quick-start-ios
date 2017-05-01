@@ -28,7 +28,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+#import "SHXAccelerator.h"
 
 /**
  * Campaign Venue
@@ -42,11 +42,14 @@
 @property (readonly, nonatomic) NSString *campaignName;
 @property (readonly, nonatomic) NSDate *timestamp;
 @property (readonly, nonatomic) NSString *customData;
+@property (readonly, nonatomic) SHXCampaignVenueEventType eventType;
+
 
 - (id)initWithVenue:(NSNumber *)venueIdent
            campaign:(NSString *)campaignName
           timestamp:(NSDate *)timestamp
-         customData:(NSString *)customData;
+         customData:(NSString *)customData
+          eventType:(SHXCampaignVenueEventType)eventType;
 
 - (id)initWithCoder:(NSCoder *)coder;
 - (void)encodeWithCoder:(NSCoder *)coder;

@@ -18,6 +18,11 @@ static NSString *apiKey = @"";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+// Uncomment if you want to collect logs into a file
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = paths[0];
+//    NSString *logPath = [documentsDirectory stringByAppendingPathComponent:@"console.log"];
+//    freopen([logPath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);
     if (apiKey.length == 0)
     {
         // Throwing alert view from AppDelegate is a little bit tricky, folks. For starters, we need a ViewController
@@ -49,7 +54,6 @@ static NSString *apiKey = @"";
         _accelerator = [[SHXAccelerator alloc] initWithKey:apiKey];
         self.accelerator.optedIn = YES;
         self.accelerator.userID = @"unique-user-id.make-sure-it-is-unique-and-consistent-between-app-restarts";
-        [self.accelerator startMonitoringForAllCampaigns];
         
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound
                                                                                         categories:nil]];

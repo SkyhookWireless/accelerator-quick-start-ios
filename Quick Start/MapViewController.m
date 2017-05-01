@@ -35,6 +35,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.accelerator startMonitoringForAllCampaigns];
     
     // Actually, we are not going to show user location on the map. Our goal is to zoom map view
     // to current location. As soon as mapView:didUpdateUserLocation receives first coordinate, we
@@ -55,6 +56,16 @@
 -(void)accelerator:(SHXAccelerator *)accelerator didFailWithError:(NSError *)error
 {
     NSLog(@"accelerator didFailWithError %@", error);
+    
+    if (error.code == SHXErrorRegionMonitoringUnavailable)
+    {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Device not supported"
+                                                                       message:@"Skyhook SDK requires geofencing, which is not available on your device."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        // Keep in mind that we assume a single view app here.
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 -(void)accelerator:(SHXAccelerator *)accelerator didEnterVenue:(SHXCampaignVenue *)venue
