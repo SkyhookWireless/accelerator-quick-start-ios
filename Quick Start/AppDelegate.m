@@ -23,6 +23,11 @@ static NSString *apiKey = @"";
 //    NSString *documentsDirectory = paths[0];
 //    NSString *logPath = [documentsDirectory stringByAppendingPathComponent:@"console.log"];
 //    freopen([logPath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);
+
+    // Here we check if apiKey is initialized. This is not to showcase Skyhook API usage patterns. We expect you to keep api key
+    // hardcoded into program code or plist file. The purpose of the whole if() branch is to alert you that you did not complete
+    // and important configuration step. Feel free to skip to the else branch right away.
+    
     if (apiKey.length == 0)
     {
         // Throwing alert view from AppDelegate is a little bit tricky, folks. For starters, we need a ViewController
@@ -41,7 +46,7 @@ static NSString *apiKey = @"";
             [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
         }];
 
-        // The above instructions might sound a somewhat complicated. The good news is you do not need to check for
+        // Again, the above instructions might sound a somewhat complicated, but the good news is you do not need to check for
         // app key presence in your app.
     }
     else

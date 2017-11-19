@@ -99,5 +99,11 @@ typedef NS_ENUM(NSInteger, SHXError)
     /**
      * The operation was aborted.
      */
-    SHXErrorOperationAborted
+    SHXErrorOperationAborted,
+
+    /**
+    * The app armed too many regions.
+    */
+    SHXErrorAppArmedTooManyRegions
+
 };

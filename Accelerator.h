@@ -44,5 +44,6 @@
 #import "SHXBehavior.h"
 #import "SHXIPLocation.h"
 #import "SHXCampaignVisit.h"
+#import "SHXCampaign.h"
 
 #endif
