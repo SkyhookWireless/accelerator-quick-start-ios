@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0020A083689D6F666C6F3E1F /* libPods-Quick Start.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1616F3D30139C10543AAEC4A /* libPods-Quick Start.a */; };
 		82F0AB681B332EA30090CACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0AB671B332EA30090CACF /* main.m */; };
 		82F0AB6B1B332EA30090CACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0AB6A1B332EA30090CACF /* AppDelegate.m */; };
 		82F0AB6E1B332EA30090CACF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0AB6D1B332EA30090CACF /* MapViewController.m */; };
@@ -14,15 +15,8 @@
 		82F0AB731B332EA30090CACF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82F0AB721B332EA30090CACF /* Images.xcassets */; };
 		82F0AB761B332EA30090CACF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F0AB741B332EA30090CACF /* LaunchScreen.xib */; };
 		82F0AB821B332EA30090CACF /* Quick_StartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0AB811B332EA30090CACF /* Quick_StartTests.m */; };
-		82F0AB8C1B332F8C0090CACF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0AB8B1B332F8C0090CACF /* MapKit.framework */; };
-		82F0AB8E1B3330460090CACF /* libAccelerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0AB8D1B3330460090CACF /* libAccelerator.a */; };
-		82F0AB8F1B3330460090CACF /* libAccelerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0AB8D1B3330460090CACF /* libAccelerator.a */; };
-		82F0ABA21B3330B70090CACF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0ABA11B3330B70090CACF /* CoreLocation.framework */; };
-		82F0ABA41B3330D60090CACF /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0ABA31B3330D60090CACF /* libsqlite3.0.dylib */; };
-		82F0ABA61B3330F30090CACF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0ABA51B3330F30090CACF /* Security.framework */; };
-		82F0ABA81B3330FF0090CACF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0ABA71B3330FF0090CACF /* SystemConfiguration.framework */; };
-		82F0ABAA1B33310D0090CACF /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0ABA91B33310D0090CACF /* AddressBook.framework */; };
-		82F0ABAC1B3331140090CACF /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0ABAB1B3331140090CACF /* AddressBookUI.framework */; };
+		D68523D72034BBB80021DD34 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68523D62034BBB80021DD34 /* MapKit.framework */; };
+		D689D6C52034C23C005359DF /* NeedhamDunkin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D689D6C42034C23C005359DF /* NeedhamDunkin.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1616F3D30139C10543AAEC4A /* libPods-Quick Start.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Quick Start.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB1704A1755B447459869DE /* libPods-Quick StartTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Quick StartTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD7897929A451281DCE5641 /* Pods-Quick Start.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick Start.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quick Start/Pods-Quick Start.debug.xcconfig"; sourceTree = "<group>"; };
+		7390C9DA731CBA6D6F02C907 /* Pods-Quick Start.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick Start.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quick Start/Pods-Quick Start.release.xcconfig"; sourceTree = "<group>"; };
 		82F0AB621B332EA30090CACF /* Quick Start.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Start.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F0AB661B332EA30090CACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F0AB671B332EA30090CACF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,30 +47,7 @@
 		82F0AB7B1B332EA30090CACF /* Quick StartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quick StartTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F0AB801B332EA30090CACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F0AB811B332EA30090CACF /* Quick_StartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quick_StartTests.m; sourceTree = "<group>"; };
-		82F0AB8B1B332F8C0090CACF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		82F0AB8D1B3330460090CACF /* libAccelerator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAccelerator.a; sourceTree = "<group>"; };
-		82F0AB911B33309A0090CACF /* Accelerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accelerator.h; sourceTree = "<group>"; };
-		82F0AB921B33309A0090CACF /* AcceleratorErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceleratorErrors.h; sourceTree = "<group>"; };
-		82F0AB931B33309A0090CACF /* SHXAccelerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXAccelerator.h; sourceTree = "<group>"; };
-		82F0AB941B33309A0090CACF /* SHXAcceleratorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXAcceleratorDelegate.h; sourceTree = "<group>"; };
-		82F0AB951B33309A0090CACF /* SHXAdCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXAdCategory.h; sourceTree = "<group>"; };
-		82F0AB961B33309A0090CACF /* SHXBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXBehavior.h; sourceTree = "<group>"; };
-		82F0AB971B33309A0090CACF /* SHXCampaignDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXCampaignDelegate.h; sourceTree = "<group>"; };
-		82F0AB981B33309A0090CACF /* SHXCampaignVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXCampaignVenue.h; sourceTree = "<group>"; };
-		82F0AB991B33309A0090CACF /* SHXCampaignVisit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXCampaignVisit.h; sourceTree = "<group>"; };
-		82F0AB9A1B33309A0090CACF /* SHXContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXContactInfo.h; sourceTree = "<group>"; };
-		82F0AB9B1B33309A0090CACF /* SHXDemographic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXDemographic.h; sourceTree = "<group>"; };
-		82F0AB9C1B33309A0090CACF /* SHXIPLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXIPLocation.h; sourceTree = "<group>"; };
-		82F0AB9D1B33309A0090CACF /* SHXJSONCreatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXJSONCreatable.h; sourceTree = "<group>"; };
-		82F0AB9E1B33309A0090CACF /* SHXNearbyCampaignVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXNearbyCampaignVenue.h; sourceTree = "<group>"; };
-		82F0AB9F1B33309A0090CACF /* SHXPersona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXPersona.h; sourceTree = "<group>"; };
-		82F0ABA01B33309A0090CACF /* SHXVenueInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXVenueInfo.h; sourceTree = "<group>"; };
-		82F0ABA11B3330B70090CACF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		82F0ABA31B3330D60090CACF /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		82F0ABA51B3330F30090CACF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		82F0ABA71B3330FF0090CACF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		82F0ABA91B33310D0090CACF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		82F0ABAB1B3331140090CACF /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D68523D62034BBB80021DD34 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F0ABAC1B3331140090CACF /* AddressBookUI.framework in Frameworks */,
-				82F0ABAA1B33310D0090CACF /* AddressBook.framework in Frameworks */,
-				82F0ABA81B3330FF0090CACF /* SystemConfiguration.framework in Frameworks */,
-				82F0ABA61B3330F30090CACF /* Security.framework in Frameworks */,
-				82F0ABA41B3330D60090CACF /* libsqlite3.0.dylib in Frameworks */,
-				82F0ABA21B3330B70090CACF /* CoreLocation.framework in Frameworks */,
-				82F0AB8C1B332F8C0090CACF /* MapKit.framework in Frameworks */,
-				82F0AB8E1B3330460090CACF /* libAccelerator.a in Frameworks */,
+				D68523D72034BBB80021DD34 /* MapKit.framework in Frameworks */,
+				0020A083689D6F666C6F3E1F /* libPods-Quick Start.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F0AB8F1B3330460090CACF /* libAccelerator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,17 +73,11 @@
 		82F0AB591B332EA30090CACF = {
 			isa = PBXGroup;
 			children = (
-				82F0ABAB1B3331140090CACF /* AddressBookUI.framework */,
-				82F0ABA91B33310D0090CACF /* AddressBook.framework */,
-				82F0ABA71B3330FF0090CACF /* SystemConfiguration.framework */,
-				82F0ABA51B3330F30090CACF /* Security.framework */,
-				82F0ABA31B3330D60090CACF /* libsqlite3.0.dylib */,
-				82F0AB901B33307E0090CACF /* Accelerator */,
-				82F0ABA11B3330B70090CACF /* CoreLocation.framework */,
-				82F0AB8B1B332F8C0090CACF /* MapKit.framework */,
 				82F0AB641B332EA30090CACF /* Quick Start */,
 				82F0AB7E1B332EA30090CACF /* Quick StartTests */,
 				82F0AB631B332EA30090CACF /* Products */,
+				D68523D52034BBB80021DD34 /* Frameworks */,
+				F6A7BE48D7CC4C90DBBD3276 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,28 +131,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		82F0AB901B33307E0090CACF /* Accelerator */ = {
+		D68523D52034BBB80021DD34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				82F0AB911B33309A0090CACF /* Accelerator.h */,
-				82F0AB921B33309A0090CACF /* AcceleratorErrors.h */,
-				82F0AB931B33309A0090CACF /* SHXAccelerator.h */,
-				82F0AB941B33309A0090CACF /* SHXAcceleratorDelegate.h */,
-				82F0AB951B33309A0090CACF /* SHXAdCategory.h */,
-				82F0AB961B33309A0090CACF /* SHXBehavior.h */,
-				82F0AB971B33309A0090CACF /* SHXCampaignDelegate.h */,
-				82F0AB981B33309A0090CACF /* SHXCampaignVenue.h */,
-				82F0AB991B33309A0090CACF /* SHXCampaignVisit.h */,
-				82F0AB9A1B33309A0090CACF /* SHXContactInfo.h */,
-				82F0AB9B1B33309A0090CACF /* SHXDemographic.h */,
-				82F0AB9C1B33309A0090CACF /* SHXIPLocation.h */,
-				82F0AB9D1B33309A0090CACF /* SHXJSONCreatable.h */,
-				82F0AB9E1B33309A0090CACF /* SHXNearbyCampaignVenue.h */,
-				82F0AB9F1B33309A0090CACF /* SHXPersona.h */,
-				82F0ABA01B33309A0090CACF /* SHXVenueInfo.h */,
-				82F0AB8D1B3330460090CACF /* libAccelerator.a */,
+				D68523D62034BBB80021DD34 /* MapKit.framework */,
+				1616F3D30139C10543AAEC4A /* libPods-Quick Start.a */,
+				2EB1704A1755B447459869DE /* libPods-Quick StartTests.a */,
 			);
-			name = Accelerator;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6A7BE48D7CC4C90DBBD3276 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FD7897929A451281DCE5641 /* Pods-Quick Start.debug.xcconfig */,
+				7390C9DA731CBA6D6F02C907 /* Pods-Quick Start.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82F0AB851B332EA30090CACF /* Build configuration list for PBXNativeTarget "Quick Start" */;
 			buildPhases = (
+				09EE0B14071D1AC68BC07096 /* [CP] Check Pods Manifest.lock */,
 				82F0AB5E1B332EA30090CACF /* Sources */,
 				82F0AB5F1B332EA30090CACF /* Frameworks */,
 				82F0AB601B332EA30090CACF /* Resources */,
+				EE0B18978BD4F9FD8CC58A53 /* [CP] Embed Pods Frameworks */,
+				A46AA30CFA2C1926EA51FDDB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,7 +204,7 @@
 						CreatedOnToolsVersion = 6.3.2;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -295,6 +255,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09EE0B14071D1AC68BC07096 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quick Start-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A46AA30CFA2C1926EA51FDDB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quick Start/Pods-Quick Start-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE0B18978BD4F9FD8CC58A53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Quick Start/Pods-Quick Start-frameworks.sh",
+				"${PODS_ROOT}/SkyhookContext/SDK/SkyhookContext.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyhookContext.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quick Start/Pods-Quick Start-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82F0AB5E1B332EA30090CACF /* Sources */ = {
@@ -432,19 +446,17 @@
 		};
 		82F0AB861B332EA30090CACF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FD7897929A451281DCE5641 /* Pods-Quick Start.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Quick Start/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-lc++",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyhookwireless.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -453,19 +465,17 @@
 		};
 		82F0AB871B332EA30090CACF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7390C9DA731CBA6D6F02C907 /* Pods-Quick Start.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Quick Start/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-lc++",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyhookwireless.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

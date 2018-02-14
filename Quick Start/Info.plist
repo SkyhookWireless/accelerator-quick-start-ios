@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>TODO: Explain why you need always permission for location services.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>TODO: Explain why you need always permission for location services.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -31,8 +27,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>TODO: Explain why you need always permission for location services.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>TODO: Explain why you need always permission for location services.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>TODO: Explain why you need always permission for location services.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

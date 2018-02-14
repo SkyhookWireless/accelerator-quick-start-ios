@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Accelerator.h"
+#import <SkyhookContext/Accelerator.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "AppDelegate.h"
