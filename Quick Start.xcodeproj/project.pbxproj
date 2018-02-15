@@ -16,7 +16,6 @@
 		82F0AB761B332EA30090CACF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F0AB741B332EA30090CACF /* LaunchScreen.xib */; };
 		82F0AB821B332EA30090CACF /* Quick_StartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0AB811B332EA30090CACF /* Quick_StartTests.m */; };
 		D68523D72034BBB80021DD34 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68523D62034BBB80021DD34 /* MapKit.framework */; };
-		D689D6C52034C23C005359DF /* NeedhamDunkin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D689D6C42034C23C005359DF /* NeedhamDunkin.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
