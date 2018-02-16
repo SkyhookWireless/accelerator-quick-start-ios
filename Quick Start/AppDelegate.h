@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SHXAccelerator.h"
+#import <SkyhookContext/Accelerator.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
