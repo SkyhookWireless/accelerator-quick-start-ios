@@ -13,6 +13,7 @@
 		D6A0CCFF20BD9DD50006C3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A0CCFD20BD9DD50006C3A5 /* Main.storyboard */; };
 		D6A0CD0120BD9DD60006C3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A0CD0020BD9DD60006C3A5 /* Assets.xcassets */; };
 		D6A0CD0420BD9DD60006C3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A0CD0220BD9DD60006C3A5 /* LaunchScreen.storyboard */; };
+		D6A0CD0C20BDADE30006C3A5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A0CD0B20BDADE30006C3A5 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D6A0CD0020BD9DD60006C3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6A0CD0320BD9DD60006C3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6A0CD0520BD9DD60006C3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A0CD0B20BDADE30006C3A5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A0CD0C20BDADE30006C3A5 /* MapKit.framework in Frameworks */,
 				9FC3FC9202F0B4B8DB66D0B3 /* Pods_QuickStartSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +55,7 @@
 		C9F7179C56A8517CF16CD5C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6A0CD0B20BDADE30006C3A5 /* MapKit.framework */,
 				7F56EF63A73B94C60D9F398E /* Pods_QuickStartSwift.framework */,
 			);
 			name = Frameworks;
@@ -123,6 +127,14 @@
 				TargetAttributes = {
 					D6A0CCF520BD9DD50006C3A5 = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
