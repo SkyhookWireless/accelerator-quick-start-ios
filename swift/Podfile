@@ -1,0 +1,7 @@
+platform :ios, '10.0'
+
+target 'QuickStartSwift' do
+  use_frameworks!
+
+  pod 'SkyhookContext', '~> 2.1.0'
+end
