@@ -54,24 +54,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     // MARK: - SHXAcceleratorDelegate
     
-    func accelerator(_ accelerator: SHXAccelerator!, didFailWithError error: Error!) {
-        
-        
-        if error._code == SHXError.regionMonitoringUnavailable.rawValue {
+    func accelerator(_ accelerator: SHXAccelerator, didFailWithError error: Error)
+    {
+        switch error
+        {
+        case SHXError.regionMonitoringUnavailable:
             let alert = UIAlertController(title: "Device not supported",
                                           message: "Skyhook SDK requires geofencing, which is not available on your device.",
                                           preferredStyle: .alert)
             present(alert, animated: true, completion: nil)
+        default:()
         }
     }
-    
-    func accelerator(_ accelerator: SHXAccelerator!, didEnter venue: SHXCampaignVenue!) {
+
+    func accelerator(_ accelerator: SHXAccelerator, didEnter venue: SHXCampaignVenue) {
         
         // SHXAcceleratorDelegate methods are always executed on main thread. Depending on
         // how much work your code is going to do you might want to run it off main thread.
-        NSLog("accelerator venue entry: \(venue!) \(venue!.venueIdent!)")
+        NSLog("accelerator venue entry: \(venue) \(venue.venueIdent)")
         
-        accelerator.fetchInfo(forVenues: [venue!.venueIdent!]) { [weak self] (venues, error) in
+        accelerator.fetchInfo(forVenues: [venue.venueIdent]) { [weak self] (venues, error) in
             
             if let error = error {
                 NSLog("Error: \(error)")
@@ -79,11 +81,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
             
             // Post notification
-            let venueInfo: SHXVenueInfo = venues![0] as! SHXVenueInfo
+            let venueInfo = venues![0]
             let content = UNMutableNotificationContent()
             content.body = "Approaching \(venueInfo.placemark.name ?? "")"
             content.sound = UNNotificationSound.default()
-            let request = UNNotificationRequest(identifier: "DemoNotification-\(venue!.venueIdent!)", content: content, trigger: nil)
+            let request = UNNotificationRequest(identifier: "DemoNotification-\(venue.venueIdent)", content: content, trigger: nil)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             
             // Add map annotation
